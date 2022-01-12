@@ -10,6 +10,6 @@ training_set = training_set.fillna(0)
 X = training_set[['Pclass','Age','SibSp']]
 y = training_set['Survived']
 
-clf = RandomForestClassifier(n_estimators=10, random_state=42)
+clf = RandomForestClassifier(n_estimators=100, random_state=42)
 clf.fit(X, y)
 joblib.dump(clf, repo_path / "models/model.joblib")
